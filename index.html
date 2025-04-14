@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedList Documentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+    <main class="p-6 max-w-5xl mx-auto">
+        <section id="introduction" class="mb-10">
+            <h1 class="text-4xl font-bold text-blue-700 mb-4">LinkedList Class</h1>
+            <p class="text-lg">A custom Python implementation of a singly linked list with extended functionality
+                including insertion, deletion, traversal, filtering, mapping, and more.</p>
+        </section>
+
+        <section id="methods" class="mb-10">
+            <h2 class="text-2xl font-semibold text-gray-700 mb-3">Methods and Examples</h2>
+            <div class="space-y-6">
+                <div>
+                    <h3 class="font-bold">append(data)</h3>
+                    <p>Adds a new node with the given data to the end of the list.</p>
+                    <pre class="bg-gray-800 text-white p-2 rounded"><code>ll.append(10)</code></pre>
+                </div>
+                <div>
+                    <h3 class="font-bold">push(data, index=None)</h3>
+                    <p>Inserts a new node. If index is provided, inserts at that position; otherwise, appends to the
+                        end.</p>
+                    <pre class="bg-gray-800 text-white p-2 rounded"><code>ll.push(5, 0)</code></pre>
+                </div>
+                <div>
+                    <h3 class="font-bold">pop(index=None)</h3>
+                    <p>Removes and returns the last node or the node at a specific index.</p>
+                    <pre class="bg-gray-800 text-white p-2 rounded"><code>ll.pop()</code></pre>
+                </div>
+                <div>
+                    <h3 class="font-bold">insertBefore(target, data)</h3>
+                    <p>Inserts a new node with the given data before the first occurrence of target.</p>
+                    <pre class="bg-gray-800 text-white p-2 rounded"><code>ll.insertBefore(10, 5)</code></pre>
+                </div>
+                <div>
+                    <h3 class="font-bold">insertAfter(target, data)</h3>
+                    <p>Inserts a new node after the first occurrence of target.</p>
+                    <pre class="bg-gray-800 text-white p-2 rounded"><code>ll.insertAfter(10, 15)</code></pre>
+                </div>
+                <div>
+                    <h3 class="font-bold">removeByValue(value)</h3>
+                    <p>Removes the first node that contains the specified value.</p>
+                    <pre class="bg-gray-800 text-white p-2 rounded"><code>ll.removeByValue(10)</code></pre>
+                </div>
+                <div>
+                    <h3 class="font-bold">clone()</h3>
+                    <p>Creates and returns a deep copy of the list.</p>
+                    <pre class="bg-gray-800 text-white p-2 rounded"><code>new_ll = ll.clone()</code></pre>
+                </div>
+                <div>
+                    <h3 class="font-bold">reverse()</h3>
+                    <p>Reverses the linked list in place.</p>
+                    <pre class="bg-gray-800 text-white p-2 rounded"><code>ll.reverse()</code></pre>
+                </div>
+                <div>
+                    <h3 class="font-bold">findIndexOf(data)</h3>
+                    <p>Returns the index of the first node containing the specified data.</p>
+                    <pre class="bg-gray-800 text-white p-2 rounded"><code>ll.findIndexOf(10)</code></pre>
+                </div>
+                <div>
+                    <h3 class="font-bold">indexOfAll(data)</h3>
+                    <p>Returns a list of all indices where the specified data is found.</p>
+                    <pre class="bg-gray-800 text-white p-2 rounded"><code>ll.indexOfAll(10)</code></pre>
+                </div>
+                <div>
+                    <h3 class="font-bold">contains(data)</h3>
+                    <p>Checks if the list contains the specified data.</p>
+                    <pre class="bg-gray-800 text-white p-2 rounded"><code>ll.contains(10)</code></pre>
+                </div>
+                <div>
+                    <h3 class="font-bold">isEmpty()</h3>
+                    <p>Checks if the list is empty.</p>
+                    <pre class="bg-gray-800 text-white p-2 rounded"><code>ll.isEmpty()</code></pre>
+                </div>
+                <div>
+                    <h3 class="font-bold">toList()</h3>
+                    <p>Returns a Python list containing all data from the linked list.</p>
+                    <pre class="bg-gray-800 text-white p-2 rounded"><code>ll.toList()</code></pre>
+                </div>
+                <div>
+                    <h3 class="font-bold">fromList(arr)</h3>
+                    <p>Populates the linked list using elements from a Python list.</p>
+                    <pre class="bg-gray-800 text-white p-2 rounded"><code>ll.fromList([1, 2, 3])</code></pre>
+                </div>
+                <div>
+                    <h3 class="font-bold">merge(otherList)</h3>
+                    <p>Appends all elements from another LinkedList to the current list.</p>
+                    <pre class="bg-gray-800 text-white p-2 rounded"><code>ll.merge(another_ll)</code></pre>
+                </div>
+                <div>
+                    <h3 class="font-bold">removeDuplicates()</h3>
+                    <p>Removes duplicate values from the list.</p>
+                    <pre class="bg-gray-800 text-white p-2 rounded"><code>ll.removeDuplicates()</code></pre>
+                </div>
+                <div>
+                    <h3 class="font-bold">detail()</h3>
+                    <p>Returns a detailed view of each node, including data and memory address.</p>
+                    <pre class="bg-gray-800 text-white p-2 rounded"><code>ll.detail()</code></pre>
+                </div>
+                <div>
+                    <h3 class="font-bold">sliceLinkedList(start, end)</h3>
+                    <p>Returns a sublist from index start to end (exclusive).</p>
+                    <pre class="bg-gray-800 text-white p-2 rounded"><code>ll.sliceLinkedList(0, 3)</code></pre>
+                </div>
+                <div>
+                    <h3 class="font-bold">replace(old, new)</h3>
+                    <p>Replaces all occurrences of old with new.</p>
+                    <pre class="bg-gray-800 text-white p-2 rounded"><code>ll.replace(10, 20)</code></pre>
+                </div>
+                <div>
+                    <h3 class="font-bold">map(function)</h3>
+                    <p>Applies a function to each element in the list.</p>
+                    <pre class="bg-gray-800 text-white p-2 rounded"><code>ll.map(lambda x: x * 2)</code></pre>
+                </div>
+                <div>
+                    <h3 class="font-bold">filteredList(function)</h3>
+                    <p>Returns a new LinkedList with elements that satisfy the function condition.</p>
+                    <pre
+                        class="bg-gray-800 text-white p-2 rounded"><code>ll.filteredList(lambda x: x % 2 == 0)</code></pre>
+                </div>
+                <div>
+                    <h3 class="font-bold">reduceList(function, initializer=None)</h3>
+                    <p>Reduces the list to a single value using the function.</p>
+                    <pre
+                        class="bg-gray-800 text-white p-2 rounded"><code>ll.reduceList(lambda acc, x: acc + x, 0)</code></pre>
+                </div>
+                <div>
+                    <h3 class="font-bold">min()</h3>
+                    <p>Returns the minimum value in the list.</p>
+                    <pre class="bg-gray-800 text-white p-2 rounded"><code>ll.min()</code></pre>
+                </div>
+                <div>
+                    <h3 class="font-bold">max()</h3>
+                    <p>Returns the maximum value in the list.</p>
+                    <pre class="bg-gray-800 text-white p-2 rounded"><code>ll.max()</code></pre>
+                </div>
+                <div>
+                    <h3 class="font-bold">sortedList(mode)</h3>
+                    <p>Returns a sorted copy of the list. Modes: "asc", "desc", "reverse", "random".</p>
+                    <pre class="bg-gray-800 text-white p-2 rounded"><code>ll.sortedList("asc")</code></pre>
+                </div>
+                <div>
+                    <h3 class="font-bold">clear()</h3>
+                    <p>Clears the entire linked list.</p>
+                    <pre class="bg-gray-800 text-white p-2 rounded"><code>ll.clear()</code></pre>
+                </div>
+                <div>
+                    <h3 class="font-bold">docs()</h3>
+                    <p>Prints a placeholder message linking to the documentation.</p>
+                    <pre class="bg-gray-800 text-white p-2 rounded"><code>ll.docs()</code></pre>
+                </div>
+
+                <div>
+                    <h3 class="font-bold">__len__()</h3>
+                    <p>Returns the number of nodes in the list.</p>
+                    <pre class="bg-gray-800 text-white p-2 rounded"><code>len(ll)</code></pre>
+                </div>
+                <div>
+                    <h3 class="font-bold">__str__()</h3>
+                    <p>Returns a string representation of the linked list.</p>
+                    <pre class="bg-gray-800 text-white p-2 rounded"><code>print(ll)</code></pre>
+                </div>
+                <div>
+                    <h3 class="font-bold">__iter__()</h3>
+                    <p>Enables iteration over the list using a loop.</p>
+                    <pre class="bg-gray-800 text-white p-2 rounded"><code>for value in ll:
+    print(value)</code></pre>
+                </div>
+                <div>
+                    <h3 class="font-bold">__getitem__(index)</h3>
+                    <p>Accesses the element at a given index.</p>
+                    <pre class="bg-gray-800 text-white p-2 rounded"><code>ll[0]</code></pre>
+                </div>
+                <div>
+                    <h3 class="font-bold">__setitem__(index, value)</h3>
+                    <p>Sets the element at the given index to a new value.</p>
+                    <pre class="bg-gray-800 text-white p-2 rounded"><code>ll[0] = 99</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="usage" class="mb-10">
+            <h2 class="text-2xl font-semibold text-gray-700 mb-3">Basic Usage</h2>
+            <pre class="bg-gray-800 text-white p-4 rounded overflow-auto">
+<code>ll = LinkedList()
+ll.append(1)
+ll.push(0)
+ll.insertAfter(1, 2)
+print(ll)  # Output: [0]->[1]->[2]-> None</code>
+      </pre>
+        </section>
+
+        <section id="examples" class="mb-10">
+            <h2 class="text-2xl font-semibold text-gray-700 mb-3">Example Operations</h2>
+            <pre class="bg-gray-800 text-white p-4 rounded overflow-auto">
+<code># Double all values
+ll.map(lambda x: x * 2)
+
+# Filter even numbers
+new_list = ll.filteredList(lambda x: x % 2 == 0)</code>
+      </pre>
+        </section>
+    </main>
+</body>
+
+</html>
